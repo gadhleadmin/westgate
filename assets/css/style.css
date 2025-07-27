@@ -34,6 +34,24 @@ nav a {
   margin-bottom: 20px;
   color: #ffffff;
 }
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.hero-buttons{
+justify-content: flex;
+}
+
+.btn {
+border: #000000;
+background-color: #ffffff;
+padding: 10px;
+border-radius: 5px;
+
+}
 .container {
   padding: 40px 20px;
   max-width: 1000px;
