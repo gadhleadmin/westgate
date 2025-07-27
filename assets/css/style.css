@@ -1,0 +1,109 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+header {
+  background-color: #0a3d62;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.hero {
+  background: linear-gradient(135deg, #78e08f, #38ada9);
+  text-align: center;
+  padding: 60px 20px;
+  color: #0a3d62;
+  height: 350px;
+
+}
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.container {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.content h2 {
+  color: #0a3d62;
+  margin-bottom: 20px;
+}
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+main h2 {
+  color: #0a3d62;
+  margin-bottom: 20px;
+  
+}
+.card {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #005555;
+}
+
+.card p {
+  color: #444;
+  font-size: 0.9em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+.contact-form button {
+  padding: 10px;
+  background-color: #0a3d62;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer {
+  background-color: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 40px;
+}

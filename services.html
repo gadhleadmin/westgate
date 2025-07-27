@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services | West Management</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+ <div id="header"></div>
+
+  <section class="hero">
+    <h1>Our Services</h1>
+    <p>Explore the solutions we offer.</p>
+  </section>
+
+<main>
+  <h2>What We Do</h2>
+  <div class="cards-container">
+    <div class="card">
+      <h3>Residential Waste Collection</h3>
+      <p>Reliable and timely waste pickup for homes.</p>
+    </div>
+    <div class="card">
+      <h3>Commercial Waste Services</h3>
+      <p>Efficient solutions for businesses and offices.</p>
+    </div>
+    <div class="card">
+      <h3>Recycling Programs</h3>
+      <p>Promoting sustainable reuse and recycling.</p>
+    </div>
+    <div class="card">
+      <h3>Emergency Clean-Up</h3>
+      <p>Fast response for urgent environmental needs.</p>
+    </div>
+  </div>
+</main>
+
+
+  <div id="footer"></div>
+
+ <script>
+    fetch('components/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    fetch('components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home | West Management</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <section class="hero">
+    <h1>Clean. Efficient. Sustainable.</h1>
+    <p>Your trusted partner in West Management Solutions.</p>
+  </section>
+
+  <main>
+    <h2>Welcome to West Management</h2>
+    <p>We are dedicated to creating clean and efficient waste management systems for cities and industries.</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('components/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    fetch('components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
