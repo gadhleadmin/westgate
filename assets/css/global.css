@@ -1,73 +1,58 @@
-/* global.css (Updates for logo and site title) */
+/* global.css */
 
-/* Basic body and container setup - remains the same */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #333;
-}
-
-/* 1. Main Header Container - remains the same */
+/* --- Existing Header Styles (Remains mostly the same as before) --- */
 .main-header {
-    background-color: #28a745; /* Example: Westgate's green background */
-    color: white; /* Default text color */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
-    padding: 10px 0; /* Vertical padding, waxaan yara yareeyay */
-    position: sticky; /* Keeps header visible on scroll */
+    background-color: #28a745;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Ensures it's on top of other content */
+    z-index: 1000;
 }
 
-/* 2. Inner Header Container (for width and alignment) - remains the same */
 .header-container {
-    max-width: 1200px; /* Max width of content */
-    margin: 0 auto; /* Center content horizontally */
-    padding: 0 20px; /* Horizontal padding for smaller screens */
-    display: flex; /* Use Flexbox */
-    justify-content: space-between; /* Space logo-wrapper and nav apart */
-    align-items: center; /* Vertically align items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* --- NEW: Logo Wrapper Styling --- */
 .logo-wrapper {
-    display: flex; /* Display logo image and site title horizontally */
-    align-items: center; /* Vertically align them */
-    gap: 10px; /* Space between image and text */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo-link {
-    text-decoration: none; /* Remove underline from the entire logo area */
-    display: flex;
+    text-decoration: none;
+    display: flex; /* Keep this flex for aligning img and span */
     align-items: center;
-    gap: 10px; /* Re-apply gap for flex item */
+    gap: 10px;
 }
 
 .logo-img {
-    height: 40px; /* Fixed height for the logo image */
-    width: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Make it circular, optional */
-    object-fit: contain; /* Ensure the image fits within the bounds */
+    height: 40px;
+    width: auto;
+    border-radius: 50%;
+    object-fit: contain;
 }
 
-/* 3. Site Title Styling (formerly .logo) */
-.site-title { /* Updated from .logo to .site-title */
-    font-size: 26px; /* Size of the logo text */
+.site-title {
+    font-size: 26px;
     font-weight: bold;
-    color: white; /* Text color should be white */
-    /* text-decoration: none; No longer needed as it's part of logo-link */
+    color: white;
     letter-spacing: 0.5px;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
 }
 
-
-/* Navigation Menu Styling (Sub-Classes/Elements) - remain mostly the same */
 .main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex; /* Display items horizontally on desktop */
 }
 
 .main-nav ul li {
@@ -89,36 +74,57 @@ body {
     transform: translateY(-2px);
 }
 
-/* Responsive adjustments */
+/* --- Responsive Adjustments for Header --- */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column; /* Stack logo-wrapper and nav vertically */
-        padding-top: 10px;
-        padding-bottom: 10px;
+        flex-direction: column; /* Logo and Nav stack vertically */
+        padding-top: 15px; /* Add some space at the top */
+        padding-bottom: 15px; /* Add some space at the bottom */
+        align-items: center; /* Center items horizontally in column layout */
     }
+
     .logo-wrapper {
-        margin-bottom: 10px; /* Space between logo and stacked nav */
+        margin-bottom: 15px; /* Space between logo and stacked navigation */
+        gap: 8px; /* Slightly reduced gap for mobile */
     }
-    .main-nav ul {
-        margin-top: 0; /* Remove extra margin */
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .main-nav ul li {
-        margin: 8px 0;
-    }
-    .main-nav ul li a {
-        font-size: 16px;
-        padding: 8px 0;
-    }
+
     .logo-img {
-        height: 35px; /* Slightly smaller logo on mobile */
+        height: 35px; /* Smaller logo on mobile */
     }
+
     .site-title {
-        font-size: 24px; /* Slightly smaller text logo on mobile */
+        font-size: 22px; /* Smaller text logo on mobile */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Menu items stack vertically */
+        text-align: center; /* Center align menu items */
+        width: 100%; /* Make sure UL takes full width */
+        margin-top: 0; /* Remove any default top margin */
+        padding: 0; /* Remove any default padding */
+    }
+
+    .main-nav ul li {
+        margin: 8px 0; /* Vertical spacing between menu items */
+    }
+
+    .main-nav ul li a {
+        font-size: 16px; /* Smaller font size for nav links */
+        padding: 10px 0; /* Increase padding for easier tapping */
+        width: 100%; /* Make link span full width for better tap area */
     }
 }
+
+/* --- Footer styles and other general styles would follow here --- */
+
+
+
+
+
+
+
+
+
 
 /* Footer styles (from previous response) - remains the same */
 footer {
