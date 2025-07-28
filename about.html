@@ -1,37 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>About | West Management</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Westgate Waste Management</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
- <div id="header"></div>
 
-  <section class="hero">
-    <h1>Our Story</h1>
-    <p>Learn about our mission, vision, and team.</p>
-  </section>
+    <div id="header-placeholder"></div>
 
-  <main>
-    <h2>Who We Are</h2>
-    <p>West Management is a forward-thinking company focused on sustainable and effective waste handling solutions.</p>
-  </main>
+    <main>
+        <section class="page-hero about-hero">
+            <div class="container">
+                <h1>Our Story & Mission</h1>
+                <p>Learn about Westgate's commitment to a sustainable future and our dedicated team.</p>
+            </div>
+        </section>
 
-  <div id="footer"></div>
+        <section class="about-intro section-padding">
+            <div class="container">
+                <h2 class="section-title">Who We Are: Pioneers in Sustainable Waste Management</h2>
+                <p class="section-description">
+                    Westgate is a leading innovator in environmentally responsible waste management solutions. Founded on the principles of sustainability and efficiency, we are dedicated to transforming waste into valuable resources and minimizing environmental impact for communities and businesses alike.
+                </p>
+            </div>
+        </section>
 
-  <script>
-    fetch('components/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      });
+        <section class="mission-vision section-padding bg-light">
+            <div class="container">
+                <div class="mission-vision-grid">
+                    <div class="mission-card">
+                        <i class="fas fa-bullseye fa-3x icon-blue"></i>
+                        <h3>Our Mission</h3>
+                        <p>To provide cutting-edge, comprehensive waste management services that promote environmental sustainability, resource recovery, and operational excellence for our clients.</p>
+                    </div>
+                    <div class="vision-card">
+                        <i class="fas fa-lightbulb fa-3x icon-green"></i>
+                        <h3>Our Vision</h3>
+                        <p>To be the leading force in creating a waste-free world, where every discarded item is seen as a potential resource, contributing to a truly circular economy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    fetch('components/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
-  </script>
+        <section class="our-values section-padding">
+            <div class="container">
+                <h2 class="section-title">Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <i class="fas fa-hand-holding-heart fa-2x"></i>
+                        <h4>Integrity</h4>
+                        <p>Operating with honesty, transparency, and the highest ethical standards in all our dealings.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-recycle fa-2x"></i>
+                        <h4>Sustainability</h4>
+                        <p>Committing to practices that protect the planet and promote resource conservation for future generations.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-users-cog fa-2x"></i>
+                        <h4>Innovation</h4>
+                        <p>Continuously seeking and implementing new technologies and methods to improve waste management.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-handshake fa-2x"></i>
+                        <h4>Customer Focus</h4>
+                        <p>Prioritizing client needs and building lasting relationships through responsive and tailored solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">Meet Our Leadership Team</h2>
+                <p class="section-description">Our team of experienced professionals is dedicated to Westgate's mission and driving innovation in waste management.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/200x200/6c757d/ffffff?text=John+Doe" alt="John Doe">
+                        <h3>John Doe</h3>
+                        <p class="title">CEO & Founder</p>
+                        <p>John is a visionary leader with over 20 years of experience in environmental sustainability and business development.</p>
+                        <div class="social-links-team">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/200x200/6c757d/ffffff?text=Jane+Smith" alt="Jane Smith">
+                        <h3>Jane Smith</h3>
+                        <p class="title">Chief Operations Officer</p>
+                        <p>Jane ensures our operations are efficient, safe, and compliant, leveraging her extensive background in logistics.</p>
+                        <div class="social-links-team">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/200x200/6c757d/ffffff?text=Ahmed+Ali" alt="Ahmed Ali">
+                        <h3>Ahmed Ali</h3>
+                        <p class="title">Head of Sustainability</p>
+                        <p>Ahmed leads our green initiatives, constantly seeking new ways to reduce waste and promote ecological balance.</p>
+                        <div class="social-links-team">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action section-padding bg-primary text-center">
+            <div class="container">
+                <h2 class="section-title text-white">Partner with Westgate for a Greener Future</h2>
+                <p class="section-description text-white">Let's work together to create effective waste management solutions tailored for you.</p>
+                <a href="contact.html" class="btn btn-white">Get in Touch Today</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // JavaScript to inject header and footer
+        fetch('components/header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading header:', error));
+
+        fetch('components/footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
 </body>
 </html>

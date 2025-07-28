@@ -1,55 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Services | West Management</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westgate Waste Management - Our Services</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
- <div id="header"></div>
 
-  <section class="hero">
-    <h1>Our Services</h1>
-    <p>Explore the solutions we offer.</p>
-  </section>
+    <div id="header-placeholder"></div>
 
-<main>
-  <h2>What We Do</h2>
-  <div class="cards-container">
-    <div class="card">
-      <h3>Residential Waste Collection</h3>
-      <p>Reliable and timely waste pickup for homes.</p>
-    </div>
-    <div class="card">
-      <h3>Commercial Waste Services</h3>
-      <p>Efficient solutions for businesses and offices.</p>
-    </div>
-    <div class="card">
-      <h3>Recycling Programs</h3>
-      <p>Promoting sustainable reuse and recycling.</p>
-    </div>
-    <div class="card">
-      <h3>Emergency Clean-Up</h3>
-      <p>Fast response for urgent environmental needs.</p>
-    </div>
-  </div>
-</main>
+    <main>
+        <section class="page-hero services-hero">
+            <div class="container">
+                <h1>Our Comprehensive Waste Management Services</h1>
+                <p>Delivering sustainable and efficient solutions for a cleaner environment.</p>
+            </div>
+        </section>
 
+        <section class="services-intro section-padding">
+            <div class="container">
+                <h2 class="section-title">Solutions Tailored to Your Needs</h2>
+                <p class="section-description">
+                    At Westgate, we offer a full spectrum of waste management services designed to meet the diverse needs of residential, commercial, and industrial clients. From collection to recycling and specialized waste handling, we ensure responsible and environmentally friendly practices every step of the way.
+                </p>
+            </div>
+        </section>
 
-  <div id="footer"></div>
+        <section class="all-services section-padding bg-light">
+            <div class="container">
+                <div class="service-details-grid">
 
- <script>
-    fetch('components/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      });
+                    <div class="service-detail-card">
+                        <i class="fas fa-truck-pickup service-icon"></i>
+                        <h3>Residential Waste Collection</h3>
+                        <p>Reliable and scheduled curbside collection services for households. We make waste disposal easy and convenient for your home, adhering to local regulations.</p>
+                        <ul>
+                            <li>Weekly or Bi-weekly pickups</li>
+                            <li>Separate bins for general waste and recyclables</li>
+                            <li>Efficient and clean collection process</li>
+                        </ul>
+                    </div>
 
-    fetch('components/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
-  </script>
+                    <div class="service-detail-card">
+                        <i class="fas fa-city service-icon"></i>
+                        <h3>Commercial Waste Management</h3>
+                        <p>Tailored waste solutions for businesses of all sizes, ensuring compliance and efficiency. We provide various bin sizes and flexible collection schedules to suit your operations.</p>
+                        <ul>
+                            <li>Customized collection plans</li>
+                            <li>Waste audits and optimization</li>
+                            <li>Specialized recycling for business waste</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-detail-card">
+                        <i class="fas fa-industry service-icon"></i>
+                        <h3>Industrial Waste Solutions</h3>
+                        <p>Handling complex industrial waste streams with safety and environmental responsibility. Our experts manage hazardous and non-hazardous industrial by-products.</p>
+                        <ul>
+                            <li>Hazardous waste disposal</li>
+                            <li>Bulk waste removal</li>
+                            <li>Compliance and regulatory guidance</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-detail-card">
+                        <i class="fas fa-recycle service-icon"></i>
+                        <h3>Comprehensive Recycling Programs</h3>
+                        <p>Dedicated programs for recycling a wide range of materials, reducing landfill waste and promoting resource recovery. We process plastics, paper, glass, metals, and more.</p>
+                        <ul>
+                            <li>Paper & Cardboard recycling</li>
+                            <li>Plastics & Glass recycling</li>
+                            <li>Metal & Electronics recycling (E-waste)</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-detail-card">
+                        <i class="fas fa-seedling service-icon"></i>
+                        <h3>Organic Waste & Composting</h3>
+                        <p>Environmentally friendly solutions for organic waste, including food scraps and yard waste. We turn organic waste into valuable compost, enriching the soil.</p>
+                        <ul>
+                            <li>Food waste collection</li>
+                            <li>Yard waste composting</li>
+                            <li>Soil amendment production</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-detail-card">
+                        <i class="fas fa-dumpster service-icon"></i>
+                        <h3>Specialty Waste Handling</h3>
+                        <p>Safe and compliant disposal of challenging waste types that require specialized handling, such as construction debris or medical waste.</p>
+                        <ul>
+                            <li>Construction & Demolition waste</li>
+                            <li>Medical & Bio-hazardous waste</li>
+                            <li>Secure document shredding</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-services section-padding bg-primary text-center">
+            <div class="container">
+                <h2 class="section-title text-white">Need a Custom Waste Solution?</h2>
+                <p class="section-description text-white">Our team is ready to design a waste management plan that perfectly fits your specific requirements. Contact us today!</p>
+                <a href="contact.html" class="btn btn-white">Request a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Waxaan hagaajinay ID-yada si ay ula socdaan div-yada cusub
+        // Waxaan sidoo kale hubinay in path-ka uu sax yahay (components/)
+        fetch('components/header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading header:', error)); // Ku dar Error handling
+
+        fetch('components/footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading footer:', error)); // Ku dar Error handling
+    </script>
+    
 </body>
 </html>

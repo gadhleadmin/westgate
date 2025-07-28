@@ -1,134 +1,589 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  background-color: #f4f4f4;
-  color: #333;
+/* style.css */
+
+/* General Section Styling */
+.section-padding {
+    padding: 80px 0; /* Padding guud ee kore iyo hoose ee sections-ka */
 }
-header {
-  background-color: #0a3d62;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 1em 2em;
-  align-items: center;
+
+.bg-light {
+    background-color: #f8f9fa; /* Background khafiif ah */
 }
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
+
+.bg-primary {
+    background-color: #28a745; /* Midabka cagaaran ee asaasiga ah */
+    color: white; /* Qoraalka cad ee ka sarreeya midabka asaasiga ah */
 }
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
+
+.text-white {
+    color: white !important; /* Hubi in qoraalka uu cad yahay */
 }
+
+.text-center {
+    text-align: center;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+/* Section Titles and Descriptions */
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #28a745; /* Midabka cagaaran */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff; /* Xariiq buluug ah oo hoose */
+    border-radius: 5px;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 60px; /* Faaruq badan ka dib description */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #78e08f, #38ada9);
-  text-align: center;
-  padding: 60px 20px;
-  color: #0a3d62;
-  height: 350px;
-
+    background: url('https://images.freecreatives.com/wp-content/uploads/2016/04/Beautiful-Plain-Website-Background.jpg') no-repeat center center/cover; /* Sawir cusub */
+    color: white;
+    text-align: center;
+    padding: 120px 20px; /* Padding badan */
+    margin-bottom: 0; /* Ka saar margin-ka hoose */
+    height: 400px; /* Cabbir joogto ah */
+    display: flex;
 }
+
+.container-hero {
+
+    margin: 0 auto; /* Center align */
+}
+
 .hero h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-  color: #ffffff;
+    font-size: 56px; /* Cabbir weyn */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Hooska qoraalka */
 }
-
 .hero p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
-
-.hero-buttons{
-justify-content: flex;
-}
-
 .btn {
-  text-decoration: none;  /* Tani waxay ka saareysaa underline */
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ffffff; /* midabka button-ka */
-  color: rgb(0, 0, 0);
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    background-color: #007bff; /* Buluug */
+    color: white;
+    padding: 15px 30px; /* Padding badan */
+    text-decoration: none;
+    border-radius: 8px; /* Border radius ka weyn */
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Si padding-ka iyo margin-ka ay u shaqeeyaan */
 }
-
 .btn:hover {
-  background-color: #0056b3;
+    background-color: #0056b3; /* Buluug madow */
+    transform: translateY(-3px); /* Saameyn yar oo kor u kac */
+}
+.btn-secondary {
+    background-color: #6c757d; /* Grey */
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+.btn-white {
+    background-color: white;
+    color: #28a745;
+}
+.btn-white:hover {
+    background-color: #e2e6ea;
+    color: #28a745;
 }
 
-.container {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+
+/* About Snapshot Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Fogaan u dhexeeya qoraalka iyo sawirka */
+    flex-wrap: wrap; /* U oggolow inuu hoos u dhaco mobile-ka */
 }
-.content h2 {
-  color: #0a3d62;
-  margin-bottom: 20px;
+.about-text {
+    flex: 1; /* U oggolow inuu ballaarto */
+    min-width: 300px; /* Ballaca ugu yar */
 }
-.cards-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
+.about-text p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
-main h2 {
-  color: #0a3d62;
-  margin-bottom: 20px;
-  
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
 }
-.card {
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  padding: 20px;
-  width: 220px;
-  text-align: center;
-  transition: transform 0.3s ease;
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.card:hover {
-  transform: translateY(-8px);
+/* Services Overview Section */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 column layout, responsive */
+    gap: 30px; /* Fogaan u dhexeeya kaararka */
+    margin-top: 40px;
+}
+.service-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px); /* Saameyn kor u kac */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.service-icon {
+    color: #007bff; /* Midabka astaanta */
+    margin-bottom: 20px;
+    font-size: 48px !important; /* Cabbir weyn */
+}
+.service-card h3 {
+    font-size: 24px;
+    color: #28a745; /* Midabka cagaaran */
+    margin-bottom: 15px;
+}
+.service-card p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  color: #005555;
+/* Why Choose Westgate (Features) Section */
+.feature-items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 4 column layout, responsive */
+    gap: 30px;
+}
+.feature-item {
+    background-color: white; /* Midab cad */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.feature-item h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+.feature-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.feature-icon {
+    color: #28a745; /* Midabka cagaaran */
+    margin-bottom: 15px;
+    font-size: 36px !important; /* Cabbir weyn */
 }
 
-.card p {
-  color: #444;
-  font-size: 0.9em;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 32px;
+    }
+    .hero h1 {
+        font-size: 48px;
+    }
+    .hero p {
+        font-size: 20px;
+    }
+    .about-content {
+        flex-direction: column; /* Bogagga yaryar, isku hoos u dhac */
+        text-align: center;
+    }
+    .about-image {
+        order: -1; /* Sawirka u dhig ka hor qoraalka mobile-ka */
+    }
+    .service-cards, .feature-items-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Column yar */
+    }
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 50px 0;
+    }
+    .hero {
+        padding: 80px 15px;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .section-description {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
 }
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
+
+@media (max-width: 576px) {
+    .service-cards, .feature-items-wrapper {
+        grid-template-columns: 1fr; /* Hal column oo kaliya mobile-ka aadka u yar */
+    }
+    .feature-item, .service-card {
+        margin-bottom: 20px; /* Faaruq dheeraad ah */
+    }
 }
-.contact-form button {
-  padding: 10px;
-  background-color: #0a3d62;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+
+
+
+
+
+
+
+
+
+
+
+
+/* services section */
+
+/* style.css (waxaad ku dari doontaa kuwa horey u jiray) */
+
+/* Page Hero Section (for internal pages) */
+.page-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1500x400/0056b3/ffffff?text=Our+Services') no-repeat center center/cover; /* Sawir cusub oo background ah */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 30px;
 }
-footer {
-  background-color: #0a3d62;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-  margin-top: 40px;
+.page-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
+.page-hero p {
+    font-size: 20px;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Services Intro Section - Uses existing .section-title and .section-description */
+
+/* All Services Grid */
+.service-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 3 column layout, flexible */
+    gap: 30px; /* Space between cards */
+    margin-top: 40px;
+}
+
+.service-detail-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Use flex for internal layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.service-detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-detail-card .service-icon {
+    color: #28a745; /* Green icon color */
+    font-size: 60px; /* Larger icon size */
+    margin-bottom: 25px;
+}
+
+.service-detail-card h3 {
+    font-size: 28px;
+    color: #007bff; /* Blue for service titles */
+    margin-bottom: 15px;
+}
+
+.service-detail-card p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allow paragraph to take up available space */
+}
+
+.service-detail-card ul {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+    text-align: left; /* Align list items to the left */
+    width: 100%; /* Take full width of the card */
+    margin-top: auto; /* Push list to the bottom of the card */
+}
+
+.service-detail-card ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+    position: relative;
+    padding-left: 25px; /* Space for custom bullet */
+}
+
+.service-detail-card ul li::before {
+    content: "\f00c"; /* Font Awesome checkmark icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900; /* For solid icon */
+    color: #28a745; /* Green checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* CTA Services section - uses existing .bg-primary, .text-center, .section-title, .section-description, .btn, .btn-white */
+.cta-services {
+    margin-top: 50px; /* Add some margin above this CTA */
+}
+
+/* Responsive adjustments for Services page */
+@media (max-width: 992px) {
+    .page-hero h1 {
+        font-size: 40px;
+    }
+    .service-details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Smaller columns */
+    }
+    .service-detail-card h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 15px;
+    }
+    .page-hero h1 {
+        font-size: 32px;
+    }
+    .page-hero p {
+        font-size: 18px;
+    }
+    .service-details-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .service-detail-card {
+        padding: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* style.css (add these styles to your existing style.css file) */
+
+/* About Page Hero Section */
+.about-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1500x400/218838/ffffff?text=About+Westgate') no-repeat center center/cover; /* Greenish background image for About page */
+}
+
+/* Mission & Vision Section */
+.mission-vision-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.mission-card, .vision-card {
+    flex-basis: 45%; /* Two columns, responsive */
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover, .vision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.mission-card h3, .vision-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #28a745; /* Green for titles */
+}
+
+.mission-card p, .vision-card p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.mission-vision-grid .icon-blue {
+    color: #007bff; /* Blue for mission icon */
+    margin-bottom: 20px;
+}
+.mission-vision-grid .icon-green {
+    color: #28a745; /* Green for vision icon */
+    margin-bottom: 20px;
+}
+
+/* Our Values Section */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 column layout, responsive */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-item i {
+    font-size: 40px;
+    color: #007bff; /* Blue for value icons */
+    margin-bottom: 15px;
+}
+
+.value-item h4 {
+    font-size: 22px;
+    color: #28a745; /* Green for value titles */
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 columns for team members */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #28a745; /* Green border around image */
+}
+
+.team-member h3 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.team-member .title {
+    font-size: 16px;
+    color: #6c757d; /* Grey color for title */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.team-member p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.social-links-team a {
+    color: #007bff;
+    margin: 0 8px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links-team a:hover {
+    color: #28a745; /* Green on hover */
+}
+
+/* Responsive adjustments for About Us page */
+@media (max-width: 992px) {
+    .mission-card, .vision-card {
+        flex-basis: 90%; /* Stack on smaller screens */
+    }
+    .values-grid, .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjust columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-card, .vision-card {
+        padding: 30px;
+    }
+    .values-grid, .team-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .team-member {
+        margin-bottom: 20px; /* Add space between stacked members */
+    }
+}
+
+
+
