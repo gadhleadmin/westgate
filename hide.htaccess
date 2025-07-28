@@ -1,0 +1,20 @@
+# .htaccess file to remove .html extension from URLs and redirect to non-index.html version
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+# Rule 1: Remove .html extension for clean URLs
+# Redirects example.com/page.html to example.com/page
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Rule 2: Redirect index.html to / (root directory)
+# This specifically handles your main index.html file
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*?)index\.html$ /$1 [L,R=301,NC,NE]
+
+# Optional: Force non-www to www (or vice versa) - example for non-www to www
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [L,R=301]
