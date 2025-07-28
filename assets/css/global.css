@@ -1,6 +1,6 @@
-/* global.css */
+/* global.css (Updates for logo and site title) */
 
-/* Basic Styles for body and container - essential for header/footer alignment */
+/* Basic body and container setup - remains the same */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,46 +9,72 @@ body {
     color: #333;
 }
 
-/* Re-using .header-container for consistency in width and centering */
-.header-container { /* This class is used in both header.html and footer.html */
-    max-width: 1200px; /* Max width for content */
-    margin: 0 auto;    /* Center the content */
-    padding: 15px 20px; /* Some padding for spacing */
-    display: flex;     /* Use Flexbox for layout */
-    justify-content: space-between; /* Space out logo/nav or footer content */
+/* 1. Main Header Container - remains the same */
+.main-header {
+    background-color: #28a745; /* Example: Westgate's green background */
+    color: white; /* Default text color */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    padding: 10px 0; /* Vertical padding, waxaan yara yareeyay */
+    position: sticky; /* Keeps header visible on scroll */
+    top: 0;
+    z-index: 1000; /* Ensures it's on top of other content */
+}
+
+/* 2. Inner Header Container (for width and alignment) - remains the same */
+.header-container {
+    max-width: 1200px; /* Max width of content */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 0 20px; /* Horizontal padding for smaller screens */
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Space logo-wrapper and nav apart */
     align-items: center; /* Vertically align items */
 }
 
-/* --- Header Specific Styles --- */
-header {
-    background-color: #28a745; /* Westgate's vibrant green */
-    color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky; /* Make header stick to top on scroll */
-    top: 0;
-    z-index: 1000; /* Ensure it stays above other content */
+/* --- NEW: Logo Wrapper Styling --- */
+.logo-wrapper {
+    display: flex; /* Display logo image and site title horizontally */
+    align-items: center; /* Vertically align them */
+    gap: 10px; /* Space between image and text */
 }
 
-.logo {
-    font-size: 26px;
+.logo-link {
+    text-decoration: none; /* Remove underline from the entire logo area */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Re-apply gap for flex item */
+}
+
+.logo-img {
+    height: 40px; /* Fixed height for the logo image */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it circular, optional */
+    object-fit: contain; /* Ensure the image fits within the bounds */
+}
+
+/* 3. Site Title Styling (formerly .logo) */
+.site-title { /* Updated from .logo to .site-title */
+    font-size: 26px; /* Size of the logo text */
     font-weight: bold;
-    color: white;
-    text-decoration: none;
+    color: white; /* Text color should be white */
+    /* text-decoration: none; No longer needed as it's part of logo-link */
     letter-spacing: 0.5px;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
-nav ul {
+
+/* Navigation Menu Styling (Sub-Classes/Elements) - remain mostly the same */
+.main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav ul li {
+.main-nav ul li {
     margin-left: 25px;
 }
 
-nav ul li a {
+.main-nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -58,14 +84,72 @@ nav ul li a {
     display: block;
 }
 
-nav ul li a:hover {
+.main-nav ul li a:hover {
     color: #d4edda;
     transform: translateY(-2px);
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Stack logo-wrapper and nav vertically */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .logo-wrapper {
+        margin-bottom: 10px; /* Space between logo and stacked nav */
+    }
+    .main-nav ul {
+        margin-top: 0; /* Remove extra margin */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .main-nav ul li {
+        margin: 8px 0;
+    }
+    .main-nav ul li a {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+    .logo-img {
+        height: 35px; /* Slightly smaller logo on mobile */
+    }
+    .site-title {
+        font-size: 24px; /* Slightly smaller text logo on mobile */
+    }
+}
 
+/* Footer styles (from previous response) - remains the same */
+footer {
+    background-color: #343a40; /* Dark grey */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px; /* Space above the footer */
+}
 
+footer .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
 
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #28a745;
+}
 
 
 

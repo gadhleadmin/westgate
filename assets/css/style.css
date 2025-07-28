@@ -60,12 +60,12 @@
 
 /* Hero Section */
 .hero {
-    background: url('https://images.freecreatives.com/wp-content/uploads/2016/04/Beautiful-Plain-Website-Background.jpg') no-repeat center center/cover; /* Sawir cusub */
+    background: url('https://storage.needpix.com/rsynced_images/green-background-1480062887P1D.jpg') no-repeat center center/cover; /* Sawir cusub */
     color: white;
     text-align: center;
     padding: 120px 20px; /* Padding badan */
     margin-bottom: 0; /* Ka saar margin-ka hoose */
-    height: 400px; /* Cabbir joogto ah */
+    height: 500px; /* Cabbir joogto ah */
     display: flex;
 }
 
